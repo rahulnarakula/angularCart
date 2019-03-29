@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-header">Cart</div>
+  <div class="card-body">
+    <table class="table">
+        <thead>
+            <tr>
+              <th>
+                   Image
+              </th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+      <tbody>
+        <tr *ngFor='let product of products'>
+          <td>
+            <img 
+                 [src]='product.imageUrl'
+                 [title]='product.productName'
+                 [style.width.px]='imageWidth'
+                 [style.margin.px]='imageMargin'>
+          </td>
+          <td>
+              {{ product.productName }}
+          </td>
+          <td>{{ product.price }}</td>
+          <td>
+            {{ getQuantity(product.productId) }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<p>
+  cart works!
+</p>

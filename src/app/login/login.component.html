@@ -1,0 +1,24 @@
+<div class="container pt-3">
+  <div *ngIf="showWrong" class="alert alert-danger my-5 row justify-content-sm-center mx-5" role="alert">
+      Wrong Username or Password.
+    </div>
+  <div class="row justify-content-sm-center">
+    
+    <div class="col-sm-6 col-md-4">
+
+      <div class="card text-center">
+        <div class="card-header">
+          <h4 class="text-center">Super Store Ltd</h4>
+        </div>
+        <div class="card-body">
+          
+          <form class="form-signin" (ngSubmit)="onSubmit()">
+            <input type="text" class="form-control mb-4" placeholder="User Name" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" required autofocus>
+            <input type="password" class="form-control mb-4" [(ngModel)]="password" placeholder="Password" [ngModelOptions]="{standalone: true}" required>            
+            <button class="btn btn-lg btn-primary btn-block mb-4" type="submit" >Sign In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
